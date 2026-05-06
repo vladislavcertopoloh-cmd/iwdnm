@@ -1,0 +1,82 @@
+:root {
+    --primary: #003366;
+    --secondary: #3b82f6;
+    --danger: #ef4444;
+    --bg: #f8fafc;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+h1 { color: var(--primary); margin-bottom: 5px; text-align: center; }
+.subtitle { text-align: center; color: #64748b; margin-bottom: 25px; font-size: 0.9em; }
+
+.form-group { margin-bottom: 20px; }
+label { display: block; font-weight: 600; margin-bottom: 8px; color: var(--primary); }
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+textarea { height: 120px; resize: vertical; }
+
+.btn-submit {
+    background: var(--primary);
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-submit:hover { background: var(--secondary); }
+
+/* Стили карточек */
+.reports-list { width: 100%; max-width: 600px; }
+
+.report-card {
+    background: var(--white);
+    border-left: 6px solid var(--secondary);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+}
+
+.report-card.high { border-left-color: var(--danger); }
+
+.card-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 12px;
+}
+
+.btn-edit { background: #e2e8f0; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-size: 13px; }
+.btn-delete { background: #fee2e2; color: var(--danger); border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-size: 13px; }

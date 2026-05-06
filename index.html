@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMS-Portal Drømtorp | Admin</title>
+    <!-- Подключаем внешние файлы -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 id="formTitle">Meld fra om HMS-avvik</h1>
+        <p class="subtitle">Drømtorp VGS - System for sikkerhet и miljø</p>
+        
+        <form id="hmsForm">
+            <input type="hidden" id="editIndex" value="-1">
+            
+            <div class="form-group">
+                <label for="category">Kategori:</label>
+                <select id="category" required>
+                    <option value="Ergonomi">Ergonomi</option>
+                    <option value="Sikkerhet">Sikkerhet</option>
+                    <option value="Miljø">Miljø</option>
+                    <option value="Psykososialt">Psykososialt</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="severity">Alvorlighet:</label>
+                <select id="severity">
+                    <option value="Lav">Lav</option>
+                    <option value="Middels">Middels</option>
+                    <option value="Høy">Høy</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Beskrivelse:</label>
+                <textarea id="description" placeholder="Hva skjedde и hvor?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit" id="submitBtn">Registrer avvik</button>
+        </form>
+    </div>
+
+    <div class="reports-list" id="reportsList">
+        <!-- Карточки будут появляться здесь через JS -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
